@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buttons</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <style>
 
 /* Main Styling */
-html {   font-size: calc( 1vh + 1vw); }
+html { font-size: calc(1vh + 1vw); }
 
 body, html {
-  font-family: Arial, sans-serif;
+  font-family:Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -55,13 +56,13 @@ body, html {
 
 .navigation {
   position: sticky;
-  top: 0; /* Ensure the navigation bar sticks to the top */
+  top: 0;
   background-color: #ffffff;
   border-bottom: 0.2rem solid darkolivegreen;
   display: flex;
   justify-content: space-around;
-  align-items: center; /* Center items vertically */
-  padding: 0.7rem; /* Increased horizontal padding */
+  align-items: center;
+  padding: 0.7rem;
 }
 
 .navigation button {
@@ -94,6 +95,17 @@ header h1 {
   margin: 0;
 }
 
+header .header-button {
+  padding: 0.5rem 1.5rem;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
 .back-to-top {
   position: fixed;
   bottom: 1rem;
@@ -107,9 +119,9 @@ header h1 {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  min-width: 2rem; /* Minimum width */
-  min-height: 2rem; /* Minimum height */
-  font-size: 1.5rem; /* Minimum font size for the arrow */
+  min-width: 2rem;
+  min-height: 2rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 .back-to-top.show {
@@ -120,31 +132,31 @@ header h1 {
 /* Main Content */
 .container {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr; /* Three Rows */
-  grid-template-rows: 0.8fr 2.2fr 1fr 2rem; /* Different heights for each row + Footer */
-  gap: 1rem; /* Gap between sections */
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 0.8fr 2.2fr 1fr 2rem;
+  gap: 1rem;
 }
 
 .content-block1 {
-    display: grid;
-    grid-column: 2 / 3; /* Background image spans from column 1 to 4 */
-    background-color: #ffffff;
-    padding: 2rem;
-    color: #3e3e3e;
-    margin-top: 1rem;
-    padding-top: 5rem;
-    font-size: 1rem;
-  }
+  display: grid;
+  grid-column: 2 / 3;
+  background-color: #ffffff;
+  padding: 2rem;
+  color: #3e3e3e;
+  margin-top: 1rem;
+  padding-top: 5rem;
+  font-size: 1rem;
+}
 
 .content-block2 {
-  grid-column: 2 / 3; /* Middle Row */
+  grid-column: 2 / 3;
   background-color: #ffffff;
   color: #3e3e3e;
   font-size: 1rem;
 }
 
 .content-block3 {
-  grid-column: 2 / 3; /* Middle Row */
+  grid-column: 2 / 3;
   background-color: #ffffff;
   color: #3e3e3e;
   font-size: 1rem;
@@ -161,14 +173,12 @@ header h1 {
   color: #666666;
 }
 
-.content-block ul li{
+.content-block ul li {
   list-style-type: disc;
   margin-left: 1.5rem;
   margin-bottom: 1rem;
-  margin-bottom: 0.5rem;
   font-size: 1rem;
 }
-
 
 section {
   padding-top: 5rem;
@@ -177,40 +187,64 @@ section {
 }
 
 #intro {
-  grid-row: 1 / 2; /* First Row */
+  grid-row: 1 / 2;
 }
 
 #types {
-  grid-row: 2 / 3; /* Second Row */
+  grid-row: 2 / 3;
 }
 
 #playground {
-  grid-row: 3 / 4; /* Third row */
+  grid-row: 3 / 4;
 }
 
+/* Inro Button */
+.intro-button {
+  padding: 0.7rem 0.9rem;
+  font-size: 1.3rem;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.intro-button:hover {
+  background-color: darkolivegreen;
+  color: rgb(255, 255, 255);
+}
+
+.intro-button:active {
+  animation: fun-animation 0.5s;
+}
+
+@keyframes fun-animation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2) rotate(10deg); }
+  100% { transform: scale(1); }
+}
 
 /* Types of Buttons */
 .button-ex {
   padding: 0.5rem 1.5rem;
-  background-color: rgb(17, 73, 84);
+  background-color: #007bff;
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 0.3rem;
   cursor: pointer;
   font-size: 0.7rem;
-  box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.2); /* Small shadow to the bottom and right */
+  box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
 }
 
 .rectangle-ex {
   padding: 0.5rem 1.5rem;
-  background-color: rgb(17, 73, 84);
+  background-color: rgb(164, 164, 164);
   color: rgb(255, 255, 255);
   font-size: 0.7rem;
   display: inline-block;
   margin-left: 1rem;
 }
 
-/* Primary Buttons*/
+/* Primary Buttons */
 .button-container {
   display: flex;
   gap: 1rem;
@@ -232,11 +266,11 @@ section {
 }
 
 .button-start:hover {
-   background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .button-start:active {
-   background-color: #004085;
+  background-color: #004085;
 }
 
 .button-submit {
@@ -265,13 +299,7 @@ section {
   background-color: #c69500;
 }
 
-/* Secundary Buttons*/
-.button-container {
-  display: flex;
-  gap: 1rem;
-  margin: 1rem 0;
-}
-
+/* Secondary Buttons */
 .secondary-button {
   padding: 0.5rem 0.7rem;
   font-size: 0.7rem;
@@ -302,7 +330,7 @@ section {
 }
 
 .button-cancel:hover {
-   background-color: #e2e6ea;
+  background-color: #e2e6ea;
 }
 
 .button-cancel:active {
@@ -323,13 +351,31 @@ section {
   background-color: #dae0e5;
 }
 
-/* Danger Button*/
-.button-container {
+/* Button Comparison */
+.button-comparison {
   display: flex;
-  gap: 10px;
-  margin: 20px 0;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
+.button-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-section ul {
+  flex-grow: 1;
+}
+
+.button-container3, .primary-button, .secondary-button {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Danger Button */
 .danger-button {
   padding: 0.5rem 0.7rem;
   font-size: 0.7rem;
@@ -454,21 +500,20 @@ section {
 }
 
 .settings-bar[data-theme="light"] {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .settings-bar[data-theme="dark"] {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
-
 /* Playground */
-.glow{
+.glow {
   padding: 1rem 2rem;
   margin: 2rem 2rem;
-  background-color:rgb(152, 152, 152);
+  background-color: rgb(152, 152, 152);
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 0.3rem;
@@ -485,10 +530,10 @@ section {
   100% { box-shadow: 0 0 1rem red; }
 }
 
-.glow2{
+.glow2 {
   padding: 2rem 2rem;
   margin: 2rem 2rem;
-  background-color:rgb(66, 65, 65);
+  background-color: rgb(66, 65, 65);
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 3rem;
@@ -529,7 +574,7 @@ section {
   padding: 1rem 2rem;
   margin: 2rem 2rem;
   background-color: rgb(96, 195, 195);
-  color: rgb(182, 91, 129); /* Change text color to match the border */
+  color: rgb(182, 91, 129);
   cursor: pointer;
   transition: transform 0.2s, background-color 0.3s;
 }
@@ -544,10 +589,10 @@ section {
   75% { transform: translateY(0.5rem); }
 }
 
-.slide{
+.slide {
   padding: 3rem 1rem;
   margin: 2rem 2rem;
-  background-color:rgb(252, 195, 24);
+  background-color: rgb(252, 195, 24);
   color: rgb(0, 0, 0);
   border: none;
   border-radius: 1rem;
@@ -571,9 +616,9 @@ section {
 }
 /* Hide default HTML checkbox */
 .switch input {
-  opacity: 0; /* Make the checkbox completely transparent */
-  width: 0;   /* Set the width to 0 so it takes up no space */
-  height: 0;  /* Set the height to 0 so it takes up no space */
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 /* The slider */
 .slider {
@@ -610,10 +655,10 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.disappear{
+.disappear {
   padding: 2.5rem 2rem;
   margin: 2rem 2rem;
-  background-color:rgb(70, 190, 250);
+  background-color: rgb(70, 190, 250);
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 0.3rem;
@@ -628,10 +673,10 @@ input:checked + .slider:before {
   50% { opacity: 0; }
 }
 
-.resize{
+.resize {
   padding: 1rem 2rem;
   margin: 2rem 2rem;
-  background-color:rgb(243, 79, 38);
+  background-color: rgb(243, 79, 38);
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 5rem;
@@ -646,10 +691,10 @@ input:checked + .slider:before {
   50% { transform: scale(1.5); }
 }
 
-.resize2{
+.resize2 {
   padding: 1rem 2rem;
   margin: 2rem 2rem;
-  background-color:rgb(136, 88, 76);
+  background-color: rgb(136, 88, 76);
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 0.3rem;
@@ -659,16 +704,17 @@ input:checked + .slider:before {
 
 .resize2:active {
   animation: resize2 2s infinite;
-} 
+}
+
 @keyframes resize2 {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(-1.5); }
 }
 
-.color-change{
+.color-change {
   padding: 1rem 2rem;
   margin: 2rem 2rem;
-  background-color:rgb(225, 230, 225);
+  background-color: rgb(225, 230, 225);
   color: rgb(0, 0, 0);
   border: none;
   border-radius: 0.3rem;
@@ -706,10 +752,10 @@ input:checked + .slider:before {
   50% { border-radius: 50%; }
 }
 
-.roll-away{
+.roll-away {
   padding: 1rem 2rem;
   margin: 2rem 2rem;
-  background-color:rgb(171, 104, 208);
+  background-color: rgb(171, 104, 208);
   color: rgb(255, 255, 255);
   font-size: 0.8rem;
   border: none;
@@ -808,7 +854,7 @@ footer button {
 }
 
 footer button:active {
-  background-color:  rgb(17, 73, 84);
+  background-color: rgb(17, 73, 84);
   color: #ffffff;
 }
 
@@ -820,14 +866,13 @@ footer button:active {
 @media (max-width: 1000px) {
 
 body, html {
-    height: 500vh;
+  height: 500vh;
 }
 
 body {
-  font-size: 0.5rem; /* Define a minimum font size */
+  font-size: 0.5rem;
   line-height: 1.5;
 }
-
 
 header {
   padding: 1rem 0;
@@ -835,13 +880,12 @@ header {
 }
 
 .button-ex,
-  .rectangle-ex {
-    height: 4rem;
-    font-size: 2rem;
-    line-height: 4rem;
-    padding: 0 5rem;
-  }
-
+.rectangle-ex {
+  height: 4rem;
+  font-size: 2rem;
+  line-height: 4rem;
+  padding: 0 5rem;
+}
 
 .popup-content {
   padding: 1rem;
@@ -860,21 +904,22 @@ header {
 }
 .content-block p {
   font-size: 0.8rem;
-  }
+}
 .navigation button {
   font-size: 0.5rem;
   padding: 0.5rem 1rem;
 }
 
-.primary-button {
-  font-size: 1rem;
-  padding: 1rem;
+.primary-button, .secondary-button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    max-width: 768px;
 }
 
-.secondary-button {
-  width: 10rem;
-  font-size: 1rem;
-  padding: 1rem;
+.primary-button, .secondary-button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    max-width: 480px
 }
 
 .danger-button {
@@ -882,7 +927,7 @@ header {
   font-size: 1rem;
   padding: 1rem;
 }
-  
+
 .icon-button {
   font-size: 1rem;
   padding: 1rem;
@@ -912,278 +957,266 @@ header {
 
 <body>
 
- <!-- Pop-up -->
-<div id="popup" class="popup">
-  <div class="popup-content">
-    <h2>Let’s Make Things Click!</h2>
-    <p>You're about to explore the fine art of button design. Ready to make some moves?</p>
-    <button id="closePopup">Let’s Dive In</button>
-  </div>
-</div>
-
-  <!-- Main Part -->
-<header id="top">
+  <!-- Pop-up -->
+ <div id="popup" class="popup">
+   <div class="popup-content">
+     <h2>Let’s Make Things Click!</h2>
+     <p>You're about to explore the fine art of button design. Ready to make some moves?</p>
+     <button id="closePopup">Let’s Dive In</button>
+   </div>
+ </div>
+ 
+   <!-- Main Part -->
+   <header id="top" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+    <img src="escape_button.png" alt="Escape Button" style="height: 100px;">
     <h1>The Art of the Button</h1>
-    <p>Discover the Power and Versatility of Buttons in the Digital World</p>
-</header>
-
-  <a href="#top" class="back-to-top">&uarr;</a>
-
-  <!-- Navigation -->
-<nav class="navigation">
-    <button onclick="location.href='#intro'">Introduction</button>
-    <button onclick="location.href='#types'">Types of Buttons</button>
-    <button onclick="location.href='#playground'">Playground</button>
-</nav>
-
-<main class="container">
-    <!-- Content -->
-    <section id="intro" class="content-block1">
-      <h2><span style="color: darkolivegreen;">The Power of Buttons</span></h2>
-      <p>Buttons: they might seem small, but they hold the key to almost everything you do online. Think about it—without buttons, how would you send a message, buy that cool gadget, or even like your friend’s awkward vacation photo? Buttons are the unsung heroes of the digital world, quietly enabling every click, every interaction, every action.</p>
-      
-      <p><b><span style="color:  rgb(17, 73, 84);">Why Are Buttons So Important?</span></b></p>
-      <ul>
-        <li><b><span style="color:  rgb(17, 73, 84);">Clarity and Direction:</span></b> A well-designed button doesn’t just sit there; it practically shouts, “Click me! Here’s what I’ll do for you!”</li>
-        <li><b><span style="color:  rgb(17, 73, 84);">Ease of Use:</span></b> Buttons are the epitome of intuitive design. No manual needed—just press, click, or tap, and voilà.</li>
-        <li><b><span style="color:  rgb(17, 73, 84);">Adaptability:</span></b> From sleek apps to chunky old-school desktops, buttons fit seamlessly into every platform and style.</li>
-      </ul>
-      
-      <p>But let’s be honest—buttons aren’t just functional. They’re the style icons of the digital world. Their color, shape, and placement aren’t chosen randomly; they’re meticulously crafted to guide you, delight you, and yes, sometimes even manipulate you (that bright red “Buy Now” button isn’t there by accident!).</p>
-      
-      <p>Modern buttons have even leveled up with interactive features. Hover over one, and it might shimmer or bounce. Click one, and it might ripple like a drop in a pond. These tiny animations don’t just look cool; they give you feedback, reassuring you that your click has been registered. Buttons today aren’t just tools—they’re experiences, small moments of joy in your daily digital life.</p>
-      
-      <p>So next time you press a button, whether it’s to order pizza or launch a spaceship (hey, we can dream), take a moment to appreciate its clever design. It’s more than a piece of code; it’s a bridge between you and infinite possibilities.</p>
-    </section>
-
-    <section id="types" class="content-block2">
-      <h2><span style="color: darkolivegreen;">The Different Types of Buttons</span></h2>
-
-      <p>Appearance matters. Users need to instantly recognize what is clickable and what isn’t. When scanning a screen, most users subconsciously identify actionable items through design cues like hierarchy, color, and shape. They’ve interacted with countless websites and applications before yours, and they know what they’re looking for. Here’s the golden rule:</p>
-      
-      <h4><span style="color:  rgb(17, 73, 84);">Make Buttons Look Like Buttons</span></h4>
-      <p>Users are familiar with what a button is supposed to look like. Avoid the temptation to be overly “creative” by designing a button that doesn’t visually convey its purpose. If it doesn’t look actionable, users might overlook it entirely.</p>
-      <button class="button-ex">looks like a button</button>
-      <div class="rectangle-ex">doesn't look like a button</div>
-      <br>
-      <br>
-      <p>Now, let’s dive into the core types of buttons and their specific roles.</p>
-      <br>
-      <h4><span style="color:  rgb(17, 73, 84);">1. Primary Button</span></h4> 
-      <p>The primary button is the star of the show, the main action driver on a page or application. This button is reserved for the most important task, whether it’s submitting a form, saving a change, or completing a transaction.</p>
-      
-      <p><b><span style="color:  rgb(17, 73, 84);">Key Characteristics:</span></b></p>
-      <ul>
-        <li>Bold and prominent colors that contrast strongly with the background</li>
-        <li>Clearly communicates the central action a user should take</li>
-      </ul>
-      <br>
-      <div class="button-container3">
-        <button class="primary-button button-start" onclick="startAction()">Jetzt starten</button>
-        <button class="primary-button button-submit" onclick="submitForm()">Formular absenden</button>
-        <button class="primary-button button-save" onclick="saveChanges()">Änderungen speichern</button>
-    </div>
-      <br>
-      <h4><span style="color: rgb(17, 73, 84);">2. Secondary Button</span></h4>
-      <p>The secondary button is like the sidekick of your primary button—helping out, but not stealing the spotlight.</p>
-      <p>Features:</p>
-      <ul>
-        <li>Designed to be less attention-grabbing than the primary button</li>
-        <li>Perfect for alternatives or actions that aren’t front and center</li>
-      </ul>
-      <br>
-      <div class="button-container">
-        <button class="secondary-button button-info" onclick="showInfo()">More Info</button>
-        <button class="secondary-button button-cancel" onclick="cancelAction()">Cancel</button>
-        <button class="secondary-button button-help" onclick="getHelp()">Help</button>
+    <img src="escape_button.png" alt="Escape Button" style="height: 100px;">
+   </header>
+ 
+   <a href="#top" class="back-to-top">&uarr;</a>
+ 
+   <!-- Navigation -->
+ <nav class="navigation">
+     <button onclick="location.href='#intro'">Introduction</button>
+     <button onclick="location.href='#types'">Types of Buttons</button>
+     <button onclick="location.href='#playground'">Playground</button>
+ </nav>
+ 
+ <main class="container">
+     <!-- Content -->
+     <section id="intro" class="content-block1">
+      <div class="intro-container">
+       <h2><span style="color: darkolivegreen;">The Power of <button class="intro-button">Buttons</button></span></h2>
       </div>
-      <br>
-      <h4><span style="color: rgb(17, 73, 84);">3. Danger Button</span></h4>
-      <p>This button isn’t messing around. It’s reserved for those big, risky moves like deleting or resetting data. Handle with care!</p>
-      <ul>
-        <li>Usually decked out in red or another bold warning color</li>
-        <li>Clearly signals, "Think twice before clicking!"</li>
-      </ul>
-      <br>
-      <div class="button-container">
-        <button class="danger-button button-delete" onclick="deleteAction()">Delete</button>
-        <button class="danger-button button-reset" onclick="resetAction()">Reset</button>
-        <button class="danger-button button-remove" onclick="removeAction()">Remove</button>
-      </div>
-      <br>
-      <h4><span style="color: rgb(17, 73, 84);">4. Icon Button</span></h4>
-      <p>Icon buttons are like the multitaskers of the button world—combining a sleek symbol with a quick action. Think of a magnifying glass for search or a gear for settings. Handy and space-saving!</p>
-      <p>Features:</p>
-      <ul>
-        <li>Includes an icon, sometimes paired with text</li>
-        <li>Minimalist and stylish design</li>
-      </ul>
-      <br>
-      <div class="button-container">
-        <button class="icon-button" onclick="searchAction()">
-          <span>🔍</span> Search
-        </button>
-        <button class="icon-button" onclick="downloadAction()">
-          <span>⬇️</span> Download
-        </button>
-        <button class="icon-button" onclick="settingsAction()">
-          <span>⚙️</span> Settings
-        </button>
-      </div>
-      <div class="search-bar" id="search-bar">
-        <input type="text" placeholder="Type your search here...">
-      </div>
-      <div class="progress-container">
-        <div id="progress-bar" class="progress-bar"></div>
-      </div>
-      <div class="settings-bar" id="settings-bar" data-theme="light">
-        <label for="theme-select">Choose Theme:</label>
-        <select id="theme-select" onchange="changeTheme()">
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-        </select>
-        <label for="notifications">Notifications:</label>
-        <input type="checkbox" id="notifications">
-        <label for="auto-update">Auto-Updates:</label>
-        <input type="checkbox" id="auto-update">
-      </div>
-      <br>
-      <p>Buttons can get even more creative with styles like toggle buttons (for on/off actions), ghost buttons (transparent and oh-so-fancy), or Floating Action Buttons (FABs) that are a must-have in mobile apps.</p>
+       <p>Buttons: they might seem small, but they hold the key to almost everything you do online. Think about it—without buttons, how would you send a message, buy that cool gadget, or even like your friend’s awkward vacation photo? Buttons are the unsung heroes of the digital world, quietly enabling every click, every interaction, every action.</p>
+       
+       <p><b><span style="color:  rgb(17, 73, 84);">Why Are Buttons So Important?</span></b></p>
+       <ul>
+         <li><b><span style="color:  rgb(17, 73, 84);">Clarity and Direction:</span></b> A well-designed button doesn’t just sit there; it practically shouts, “Click me! Here’s what I’ll do for you!”</li>
+         <li><b><span style="color:  rgb(17, 73, 84);">Ease of Use:</span></b> Buttons are the epitome of intuitive design. No manual needed—just press, click, or tap, and voilà.</li>
+         <li><b><span style="color:  rgb(17, 73, 84);">Adaptability:</span></b> From sleek apps to chunky old-school desktops, buttons fit seamlessly into every platform and style.</li>
+       </ul>
+       
+       <p>But let’s be honest—buttons aren’t just functional. They’re the style icons of the digital world. Their color, shape, and placement aren’t chosen randomly; they’re meticulously crafted to guide you, delight you, and yes, sometimes even manipulate you (that bright red “Buy Now” button isn’t there by accident!).</p>
+       
+       <p>Modern buttons have even leveled up with interactive features. Hover over one, and it might shimmer or bounce. Click one, and it might ripple like a drop in a pond. These tiny animations don’t just look cool; they give you feedback, reassuring you that your click has been registered. Buttons today aren’t just tools—they’re experiences, small moments of joy in your daily digital life.</p>
+       
+       <p>So next time you press a button, whether it’s to order pizza or launch a spaceship (hey, we can dream), take a moment to appreciate its clever design. It’s more than a piece of code; it’s a bridge between you and infinite possibilities.</p>
      </section>
-
-    <section id="playground" class="content-block3">
-      <h2><span style="color: darkolivegreen;">Playground</span></h2>
-      <button class="glow">Glow</button>
-      <button class="shake">Shake</button>
-      <button class="slide">Slide</button>
-      <button class="oval2">Rotate</button>
-      <label class="switch">
-        <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
-        <span class="slider round"></span>
-      </label>
-      <button class="disappear">Disappear</button>
-      <button class="resize">Resize</button>
-      <button class="color-change">Change Color</button>
-      <button class="circle">Rotate</button>
-      <button class="form-change">Change Form</button>
-      <button class="roll-away">Rotate</button>
-      <button class="shake2">Shake</button>
-      <button class="oval">Resize</button>
-      <button class="resize2">Resize</button>
-      <button class="glow2">Glow</button>
-    </section>
-</main>
-
-<!-- Footer -->
-<footer>
-  <button id="learnMore">Learn more</button>
-  <button id="noThanks">No, thanks</button>
-</footer>
-
-
+ 
+     <section id="types" class="content-block2">
+      <h2><span style="color: darkolivegreen;">The Different Types of Buttons</span></h2>
+   
+      <p>Appearance matters. Users need to instantly recognize what is clickable and what isn’t. When scanning a screen, most users subconsciously identify actionable items through design cues like hierarchy, color, and shape. They’ve interacted with countless websites and applications before yours, and they know what they’re looking for. Here’s the golden rule:</p>
+   
+      <h4><span style="color: rgb(17, 73, 84);">Make Buttons Look Like Buttons</span></h4>
+      <p>Users are familiar with what a button is supposed to look like. Avoid the temptation to be overly “creative” by designing a button that doesn’t visually convey its purpose. If it doesn’t look actionable, users might overlook it entirely.</p>
+   
+      <p>A button should have clear visual indicators that make it recognizable as an interactive element. Here are some key characteristics that define a button:</p>
+      <ul>
+        <li><strong>Shadows and Depth:</strong> Adding shadows or a slight 3D effect makes buttons appear raised and clickable. Flat elements without any depth can blend into the background, making them less recognizable as buttons.</li>
+        <li><strong>Shape and Size:</strong> Buttons typically have rounded or rectangular shapes with consistent dimensions, making them easy to identify. If an element looks like plain text or a decorative box, users might not think to click it.</li>
+        <li><strong>Contrast and Color:</strong> Buttons often stand out from the background with a contrasting color that grabs attention.</li>
+        <li><strong>Pointer Cursor:</strong> When hovering over a button, the mouse pointer should change to indicate that it's clickable. If hovering over an element doesn’t change the cursor, users may not realize it’s interactive.</li>
+        <li><strong>Padding and Spacing:</strong> Proper padding around text inside the button improves readability and clickability.</li>
+      </ul>
+   
+      <button class="button-ex">Looks like a button</button>
+      <div class="rectangle-ex">Doesn't look like a button</div>
+       <br>
+       <br>
+       <p>Now, let’s dive into the core types of buttons and their specific roles.</p>
+       <br>
+       <div class="button-comparison">
+        <div class="button-section">
+          <h4><span style="color: rgb(17, 73, 84);">1. Primary Button</span></h4>
+          <p>The primary button is the star of the show, the main action driver on a page or application. This button is reserved for the most important task, whether it’s submitting a form, saving a change, or completing a transaction.</p>
+          <p>Features:</p>
+          <ul>
+            <li>Bold and prominent colors that contrast strongly with the background</li>
+            <li>Clearly communicates the central action a user should take</li>
+          </ul>
+          <br>
+          <div class="button-container3">
+            <button class="primary-button button-start" onclick="startAction()">Start Now</button>
+            <button class="primary-button button-submit" onclick="submitForm()">Submit Form</button>
+            <button class="primary-button button-save" onclick="saveChanges()">Save Changes</button>
+          </div>
+        </div>
+      
+        <div class="button-section">
+          <h4><span style="color: rgb(17, 73, 84);">2. Secondary Button</span></h4>
+          <p>The secondary button is like the sidekick of your primary button—helping out, but not stealing the spotlight.</p>
+          <br>
+          <br>
+          <p>Features:</p>
+          <ul>
+            <li>Designed to be less attention-grabbing than the primary button</li>
+            <li>Perfect for alternatives or actions that aren’t front and center</li>
+          </ul>
+          <br>
+          <div class="button-container">
+            <button class="secondary-button button-info" onclick="showInfo()">More Info</button>
+            <button class="secondary-button button-cancel" onclick="cancelAction()">Cancel</button>
+            <button class="secondary-button button-help" onclick="getHelp()">Help</button>
+          </div>
+        </div>
+      </div>
+       <br>
+       <h4><span style="color: rgb(17, 73, 84);">3. Danger Button</span></h4>
+       <p>This button isn’t messing around. It’s reserved for those big, risky moves like deleting or resetting data. Handle with care!</p>
+       <p>Features:</p>
+       <ul>
+         <li>Usually decked out in red or another bold warning color</li>
+         <li>Clearly signals, "Think twice before clicking!"</li>
+       </ul>
+       <br>
+       <div class="button-container">
+         <button class="danger-button button-delete" onclick="deleteAction()">Delete</button>
+         <button class="danger-button button-reset" onclick="resetAction()">Reset</button>
+         <button class="danger-button button-remove" onclick="removeAction()">Remove</button>
+       </div>
+       <br>
+       <h4><span style="color: rgb(17, 73, 84);">4. Icon Button</span></h4>
+       <p>Icon buttons are like the multitaskers of the button world—combining a sleek symbol with a quick action. Think of a magnifying glass for search or a gear for settings. Handy and space-saving!</p>
+       <p>Features:</p>
+       <ul>
+         <li>Includes an icon, sometimes paired with text</li>
+         <li>Minimalist and stylish design</li>
+       </ul>
+       <br>
+       <div class="button-container">
+         <button class="icon-button" onclick="searchAction()">
+           <span>🔍</span> Search
+         </button>
+         <button class="icon-button" onclick="downloadAction()">
+           <span>⬇️</span> Download
+         </button>
+         <button class="icon-button" onclick="settingsAction()">
+           <span>⚙️</span> Settings
+         </button>
+       </div>
+       <div class="search-bar" id="search-bar">
+         <input type="text" placeholder="Type your search here...">
+       </div>
+       <div class="progress-container">
+         <div id="progress-bar" class="progress-bar"></div>
+       </div>
+       <div class="settings-bar" id="settings-bar" data-theme="light">
+         <label for="theme-select">Choose Theme:</label>
+         <select id="theme-select" onchange="changeTheme()">
+             <option value="light">Light</option>
+             <option value="dark">Dark</option>
+         </select>
+         <label for="notifications">Notifications:</label>
+         <input type="checkbox" id="notifications">
+         <label for="auto-update">Auto-Updates:</label>
+         <input type="checkbox" id="auto-update">
+       </div>
+       <br>
+       <p>Buttons can get even more creative with styles like toggle buttons (for on/off actions), ghost buttons (transparent and oh-so-fancy), or Floating Action Buttons (FABs) that are a must-have in mobile apps.</p>
+      </section>
+ 
+<section id="playground" class="content-block3">
+    <h2><span style="color: darkolivegreen;">Playground</span></h2>
+    <p style="color: rgb(17, 73, 84);">Click the buttons to see the full effect of the animations.</p>
+    <p style="font-size: 0.7rem;">Tip: Click once for a single cycle and hold the buttons for an infinite cycle.</p>
+    <button class="glow" onclick="runAnimation(this, 'glow')">Glow</button>
+    <button class="shake" onclick="runAnimation(this, 'shake')">Shake</button>
+    <button class="slide" onclick="runAnimation(this, 'slide')">Slide</button>
+    <button class="oval2" onclick="runAnimation(this, 'oval2')">Rotate</button>
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+      <span class="slider round"></span>
+    </label>
+    <button class="disappear" onclick="runAnimation(this, 'disappear')">Disappear</button>
+    <button class="resize" onclick="runAnimation(this, 'resize')">Resize</button>
+    <button class="color-change" onclick="runAnimation(this, 'color-change')">Change Color</button>
+    <button class="circle" onclick="runAnimation(this, 'rotate-circle')">Roll</button>
+    <button class="form-change" onclick="runAnimation(this, 'form-change')">Change Form</button>
+    <button class="roll-away" onclick="runAnimation(this, 'roll-away')">Rotate</button>
+    <button class="shake2" onclick="runAnimation(this, 'shake2')">Shake</button>
+    <button class="oval" onclick="runAnimation(this, 'scale-oval')">Resize</button>
+    <button class="resize2" onclick="runAnimation(this, 'resize2')">Resize</button>
+    <button class="glow2" onclick="runAnimation(this, 'glow2')">Glow</button>
+     </section>
+ </main>
+ 
+ <!-- Footer -->
+ <footer>
+   <button id="learnMore">Learn more</button>
+   <button id="noThanks">No, thanks</button>
+ </footer>
+ 
 <script>
-  // Close the pop-up
-  document.getElementById("closePopup").addEventListener("click", function () { // Get the element with id "closePopup" and add a click event listener
-    document.getElementById("popup").style.display = "none"; // Hide the pop-up by setting its display to "none"
-  });
-  
-  // Primary Button Actions
-  function startAction() { // Define the function for the start action
-    alert('The action has been successfully launched!'); // Show an alert message
-  }
-  function submitForm() { // Define the function for the submit form action
-    alert('The form has been submitted successfully!'); // Show an alert message
-  }
-  function saveChanges() { // Define the function for the save changes action
-    alert('The changes have been saved successfully!'); // Show an alert message
-  }
-  
-  // Secondary Button Actions
-  function showInfo() { // Define the function for the show info action
-    alert('Here is more information:\n\n' + // Show an alert message with more information
-    'For more details visit our website:\n\n https://www.example.com\n\n' +
-    'Or contact us by e-mail:\n\n info@example.com');
-  }
-  function cancelAction() { // Define the function for the cancel action
-    alert('Action canceled\n\n' + // Show an alert message indicating the action was canceled
-    'Do you really want to stop the process?\n\n' +
-    'All unsaved changes are lost.');
-  }
-  function getHelp() { // Define the function for the get help action
-    alert('We are at your side for questions and problems!\n\n' + // Show an alert message with help information
-    'If you have any problems with the website, please visit our help page:\n\n https://www.example.com/help\n\n' +
-    'Or contact our support team:\n\n support@example.com');
-  }
-  
-  // Danger Button Actions
-  function deleteAction() { // Define the function for the delete action
-    alert('Data has been successfully deleted!'); // Show an alert message indicating data was deleted
-  }
-  function resetAction() { // Define the function for the reset action
-    alert('Settings have been reset!'); // Show an alert message indicating settings were reset
-  }
-  function removeAction() { // Define the function for the remove action
-    alert('Element has been removed!'); // Show an alert message indicating an element was removed
-  }
-  
-  // Icon Button Actions
-  function searchAction() { // Define the function for the search action
-    alert('Search function started!'); // Show an alert message indicating the search function started
-  }
-  function downloadAction() { // Define the function for the download action
-    alert('Download completed!'); // Show an alert message indicating the download was completed
-  }
-  function settingsAction() { // Define the function for the settings action
-    alert('Settings open!'); // Show an alert message indicating the settings are open
-  }
-  
-  // Search bar display
-  function searchAction() { // Define the function for the search action
-    const searchBar = document.getElementById('search-bar'); // Get the element with id "search-bar"
-    searchBar.style.display = 'block'; // Display the search bar by setting its display to "block"
-  }
-  
-  // Download progress bar
-  function downloadAction() { // Define the function for the download action
-    const progressBar = document.getElementById('progress-bar'); // Get the element with id "progress-bar"
-    progressBar.style.width = '0%'; // Set the initial width of the progress bar to 0%
-    let width = 0; // Initialize the width variable to 0
-    const interval = setInterval(() => { // Set an interval to update the progress bar
-      if (width >= 100) { // Check if the width is greater than or equal to 100
-        clearInterval(interval); // Clear the interval
-        alert('Download completed!'); // Show an alert message indicating the download was completed
-      } else { // If the width is less than 100
-        width += 10; // Increase the width by 10
-        progressBar.style.width = width + '%'; // Update the width of the progress bar
-      }
-    }, 300); // Set the interval to 300 milliseconds
-  }
-  
-  // Settings bar display
-  function settingsAction() { // Define the function for the settings action
-    const settingsBar = document.getElementById('settings-bar'); // Get the element with id "settings-bar"
-    settingsBar.style.display = 'block'; // Display the settings bar by setting its display to "block"
-  }
-  
-  // Change the theme based on the selected option
-  function changeTheme() { // Define the function to change the theme
-    var themeSelect = document.getElementById('theme-select'); // Get the element with id "theme-select"
-    var settingsBar = document.getElementById('settings-bar'); // Get the element with id "settings-bar"
-    var selectedTheme = themeSelect.value; // Get the selected theme value
-    settingsBar.setAttribute('data-theme', selectedTheme); // Set the data-theme attribute of the settings bar to the selected theme
-  }
-  
-  // Toggle between light and dark themes
-  function toggleTheme() { // Define the function to toggle the theme
-    var checkbox = document.getElementById('theme-toggle'); // Get the element with id "theme-toggle"
-    var settingsBar = document.getElementById('settings-bar'); // Get the element with id "settings-bar"
-    if (checkbox.checked) { // Check if the checkbox is checked
-      settingsBar.setAttribute('data-theme', 'dark'); // Set the data-theme attribute of the settings bar to "dark"
-    } else { // If the checkbox is not checked
-      settingsBar.setAttribute('data-theme', 'light'); // Set the data-theme attribute of the settings bar to "light"
+// Close the pop-up
+document.getElementById("closePopup").addEventListener("click", function () {
+  document.getElementById("popup").style.display = "none";
+});
+
+// Primary Button Actions
+function startAction() {
+  alert('The action has been successfully launched!');
+}
+function submitForm() {
+  alert('The form has been submitted successfully!');
+}
+function saveChanges() {
+  alert('The changes have been saved successfully!');
+}
+
+// Secondary Button Actions
+function showInfo() {
+  alert('Here is more information:\n\n' +
+  'For more details visit our website:\n\n https://www.example.com\n\n' +
+  'Or contact us by e-mail:\n\n info@example.com');
+}
+function cancelAction() {
+  alert('Action canceled\n\n' +
+  'Do you really want to stop the process?\n\n' +
+  'All unsaved changes are lost.');
+}
+function getHelp() {
+  alert('We are at your side for questions and problems!\n\n' +
+  'If you have any problems with the website, please visit our help page:\n\n https://www.example.com/help\n\n' +
+  'Or contact our support team:\n\n support@example.com');
+}
+
+// Danger Button Actions
+function deleteAction() {
+  alert('Data has been successfully deleted!');
+}
+function resetAction() {
+  alert('Settings have been reset!');
+}
+function removeAction() {
+  alert('Element has been removed!');
+}
+
+// Icon Button Actions
+function searchAction() {
+  const searchBar = document.getElementById('search-bar');
+  searchBar.style.display = 'block';
+}
+function downloadAction() {
+  const progressBar = document.getElementById('progress-bar');
+  progressBar.style.width = '0%';
+  let width = 0;
+  const interval = setInterval(() => {
+    if (width >= 100) {
+      clearInterval(interval);
+      alert('Download completed!');
+    } else {
+      width += 10;
+      progressBar.style.width = width + '%';
     }
-  }
-  
+  }, 300);
+}
+function settingsAction() {
+  const settingsBar = document.getElementById('settings-bar');
+  settingsBar.style.display = 'block';
+}
+
   // Back-to-top button functionality
   window.addEventListener('scroll', function() { // Add a scroll event listener to the window
     const button = document.querySelector('.back-to-top'); // Get the element with class "back-to-top"
@@ -1201,31 +1234,48 @@ header {
       button.style.bottom = '1rem'; // Set the bottom position of the button to 1rem
     }
   });
-  
-  // "Learn More" button alert
-  document.getElementById("learnMore").addEventListener("click", function() { // Get the element with id "learnMore" and add a click event listener
-    alert("If you want to know more about buttons, take a look at the websites that inspired me to create this button website:\n\n\n" + // Show an alert message with more information
-          "1. https://balsamiq.com/learn/articles/button-design-best-practices/?utm_source=chatgpt.com\n\n" +
-          "2. https://app.uxcel.com/courses/ui-components-n-patterns/types-344\n\n" +
-          "3. https://medium.com/appledeveloperacademy-ufpe/buttons-in-ui-design-types-and-best-practices-baefce6d5909\n\n" +
-          "4. https://www.setproduct.com/blog/button-ui-design");
-  });
-  
-   
-  // "No Thanks" button move away on hover
-  const noThanksButton = document.getElementById("noThanks"); // Get the element with id "noThanks"
-  noThanksButton.addEventListener("mouseover", function () { // Add a mouseover event listener to the button
-    const randomX = Math.random() * 50 - 25; // Generate a random X position
-    const randomY = Math.random() * 50 - 25; // Generate a random Y position
-    noThanksButton.style.transform = `translate(${randomX}px, ${randomY}px)`; // Move the button to the random position
-  });
 
-  // "No Thanks" button alert
-  document.getElementById("noThanks").addEventListener("click", function() { // Get the element with id "noThanks" and add a click event listener
-    alert("Too bad you don't want to know more."); // Show an alert message indicating the user doesn't want to know more
-  });
-  
-  </script>
+// "Learn More" button overlay
+document.getElementById("learnMore").addEventListener("click", function() {
+  const overlay = document.createElement('div');
+  overlay.style.position = 'fixed';
+  overlay.style.top = '0';
+  overlay.style.left = '0';
+  overlay.style.width = '100%';
+  overlay.style.height = '100%';
+  overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+  overlay.style.display = 'flex';
+  overlay.style.alignItems = 'center';
+  overlay.style.justifyContent = 'center';
+  overlay.style.zIndex = '1000';
+  overlay.innerHTML = `
+    <div style="background: white; padding: 2rem; border-radius: 10px; text-align: center;">
+      <h2>Additional Resources</h2>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="https://balsamiq.com/learn/articles/button-design-best-practices/?utm_source=chatgpt.com" target="_blank">Button Design Best Practices</a></li>
+        <li><a href="https://app.uxcel.com/courses/ui-components-n-patterns/types-344" target="_blank">UI Components and Patterns</a></li>
+        <li><a href="https://medium.com/appledeveloperacademy-ufpe/buttons-in-ui-design-types-and-best-practices-baefce6d5909" target="_blank">Buttons in UI Design</a></li>
+        <li><a href="https://www.setproduct.com/blog/button-ui-design" target="_blank">Button UI Design</a></li>
+        <li><a href="https://pixabay.com/de/vectors/flucht-minimal-abbrechen-rechner-9186559/" target="_blank">ESC Button source</a></li>
+      </ul>
+      <button onclick="document.body.removeChild(this.parentElement.parentElement)">Close</button>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+});
 
-</body>
-</html>
+// "No Thanks" button move away on hover
+const noThanksButton = document.getElementById("noThanks");
+noThanksButton.addEventListener("mouseover", function () {
+  const randomX = Math.random() * 200 - 100;
+  const randomY = Math.random() * 200 - 100;
+  noThanksButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
+});
+
+// "No Thanks" button alert
+document.getElementById("noThanks").addEventListener("click", function() {
+  alert("Too bad you don't want to know more.");
+});
+</script>
+ </body>
+ </html>
